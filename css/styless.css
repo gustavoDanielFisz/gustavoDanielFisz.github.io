@@ -1,0 +1,319 @@
+/* Paleta de colores Independiente */
+:root {
+  --rojo-independiente: #D00000;
+  --rojo-claro: #F25C54;
+  --blanco: #FFFFFF;
+  --gris-texto: #222222;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('../img/lad1.jpg') repeat;
+  background-attachment: fixed;
+  color: var(--gris-texto);
+  font-size: 16px;
+}
+
+main {
+  padding-top: 110px;
+}
+
+.titulo-productos {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--rojo-independiente);
+}
+
+/* Navbar Independiente */
+.navbar-independiente {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--rojo-independiente);
+  color: var(--blanco);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  height: 100px;
+}
+
+.navbar-independiente.scrolled {
+  height: 70px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  opacity: 0.98;
+}
+
+.navbar-independiente .navbar-brand img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-independiente .nav-link {
+  background-color: var(--blanco);
+  color: var(--rojo-independiente);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  margin: 0 0.3rem;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.navbar-independiente .nav-link:hover {
+  background-color: var(--rojo-claro);
+  color: var(--blanco);
+}
+
+nav i {
+  margin-left: 0.3rem;
+  color: var(--rojo-independiente);
+}
+
+/* Banner Hero */
+.banner {
+  background-image: url('../img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--blanco);
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.banner h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.banner p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-banner {
+  background-color: var(--rojo-independiente);
+  color: var(--blanco);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.btn-banner:hover {
+  background-color: var(--rojo-claro);
+}
+
+/* Productos Grid */
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.producto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 2px solid var(--rojo-independiente);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(208, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 250px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.producto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(208, 0, 0, 0.35);
+}
+
+.producto-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.producto-card h3 {
+  margin: 0.5rem 0;
+  flex-grow: 1;
+  font-weight: 700;
+  color: var(--rojo-independiente);
+}
+
+.producto-card p {
+  margin: 0.5rem 0;
+  font-weight: 700;
+  color: var(--gris-texto);
+}
+
+.producto-card button {
+  background-color: var(--rojo-independiente);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 25px;
+  color: var(--blanco);
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+.producto-card button:hover {
+  background-color: var(--rojo-claro);
+  color: var(--blanco);
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(208, 0, 0, 0.2);
+}
+
+form input,
+form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 2px solid var(--rojo-independiente);
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: var(--rojo-independiente);
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 25px;
+  color: var(--blanco);
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--rojo-claro);
+}
+
+#form-error {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background: var(--rojo-independiente);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Carrito de compras */
+.carrito-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.carrito-container th,
+.carrito-container td {
+  border: 1px solid var(--rojo-independiente);
+  padding: 0.75rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.carrito-container th {
+  background-color: var(--rojo-claro);
+  color: var(--blanco);
+  font-weight: 700;
+}
+
+.carrito-container tfoot td {
+  font-weight: 700;
+  background-color: #fff0f0;
+  color: var(--rojo-independiente);
+}
+
+.carrito-container button {
+  background-color: var(--rojo-independiente);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+  color: var(--blanco);
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+.carrito-container button:hover {
+  background-color: var(--rojo-claro);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main {
+    padding-top: 120px;
+  }
+  .productos-container {
+    margin: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .producto-card {
+    max-width: 100%;
+  }
+}
+
+/* Navbar scroll animation */
+.navbar-independiente {
+  transition: all 0.3s ease;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar-independiente.scrolled {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  background-color: #b30000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
